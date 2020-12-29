@@ -18,23 +18,19 @@ public class EmployeeWage {
 		System.out.println("Welcome to employee wage computation program");
 		Random random=new Random();
 		int attendance=random.nextInt(3);
-		if(attendance == fullTimePresent)
+		switch(attendance)
 		{
-			System.out.println("Employee is present full time:"+attendance);
-	     	dailyEmpWage=fullTimeHour*wagePerHour;
-     		System.out.println("Daily Emp wage:" +dailyEmpWage);
-		}
-		else if(attendance == partTimePresent)
-		{
-			System.out.println("Employee is present half time:"+attendance);
-    		dailyEmpWage=partTimeHour*wagePerHour;
-    		System.out.println("Daily Emp Wage:"+dailyEmpWage);
-		}
-		else
-		{
-			System.out.println("Employee is absent:"+attendance);
-    		dailyEmpWage=absent*wagePerHour;
-      		System.out.println("Employee is absent:" +dailyEmpWage);
+	                case 1:
+               			int partTimeWage=(partTimeHour*wagePerHour);
+	                	System.out.println("Part Time Employee "+partTimeWage);
+	                	break;
+	                case 2:
+
+                		int fullTimeWage=(fullTimeHour*wagePerHour);
+                		System.out.println("Full Time Employee "+fullTimeWage);
+                		break;
+	                default:
+                		System.out.println("Absent "+absent);
 		}
 	}
 
