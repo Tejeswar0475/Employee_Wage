@@ -30,7 +30,7 @@ public class EmpWageBuilderObject {
 		{
 			totalWorkingDays++;
 			int empCheck=random.nextInt(3);
-				//(int) Math.floor(Math.random() * 10)%3;
+
 			switch(empCheck)
 			{
 			case IS_PART_TIME:
@@ -59,7 +59,6 @@ public class EmpWageBuilderObject {
 
 		dMart.computeEmpWage();
 		System.out.println(dMart);
-
 
 		reliance.computeEmpWage();
 		System.out.println(reliance);
